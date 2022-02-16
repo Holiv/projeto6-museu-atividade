@@ -4,46 +4,61 @@ body{
     font: 12px "Lucida Grande", "Lucida Sans Unicode", "Arial", "sans-serif";
 }
 
-/* formatação header */
-header{
-    padding: 15px 0;
-    height: 55px;
-}
-
-/* formatação de container*/
+/* definir a dimensão do container*/
 #container{
-    width: 1080px;
     margin: 0 auto;
+    width: 1080px;
+    
 }
 
-/* configuração de logo */
-#logo a {
-    width: 248px;
+/* definir a dimensão do header - configurar como flex - configurar o alinhamento dos conteudos que ficarão dentro
+do header */
+header{
+    height: 55px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    
+}
+
+/* configurar como flex para alinhamento a esquerda - definir o alinhamento na vertical como center */
+#logo{
+    display: flex;
+    align-items: center;
+    
+}
+
+#logo a{
+    display: flex;
+    width: 450px;
     height: 21px;
-    text-indent: -1999px;
-    display: block;
+    text-indent: -9999px;
     background: url(img/logo.png) no-repeat;
+     
 }
 
-/* configuração geral de ul */
-ul{
-   list-style: none;
-   text-decoration: none;
+/* definir como flex para alinhamento a direita - definir tamanho da area do conteudo - definiir o alinhamento
+do conteudo que terá dentro do nav*/
+nav{
+    display: flex;
+    justify-content: center;
+    width: 600px;
 }
 
-/* configuração navegação */
+/* definir ul como flex para que a lista fique na horizontal */
 nav ul{
-    float: right;
+    display: flex;
+       
 }
-nav li {
-    display: inline-block;
+ul li{
+    list-style: none;
+    margin-right: 25px;
+}
+ul li a{
     text-transform: uppercase;
+    text-decoration: none;
 }
-nav li a{
-    margin: 20px;
-    display: block;
-}
-nav li a:hover{
+ul li a:hover{
     border-bottom: 1px solid #535858;
 }
 
@@ -53,4 +68,116 @@ a:link, a:active, a:visited{
 }
 a:hover{
     color: #227115;
+}
+/*inicio formatação conteudo
+_______________________________________*/
+
+#main{
+    display: flex;
+    
+}
+#conteudo{
+    width: 710px;
+   
+}
+    #postagens{
+        width: 670px;
+        padding: 10px 20px 10px 20px;
+        float: left;
+        
+    }
+    #video{
+        float: left;
+    }
+    #mapa{
+        float: right;
+    }
+    #exposicoes{
+        float: left;
+        width: 310px;
+        margin-top: 15px;
+    }
+        #exposicoes li{
+            list-style:disc;
+        }
+    #anos {
+        float: right;
+        width: 310px;
+        text-align: justify;
+        margin-top: 15px;
+    }
+
+aside{
+    width: 350px;
+    background: #ebe7dd;
+    margin-left: 20px;
+    
+    padding-bottom: 30px;
+}
+section#visita{
+    background: #cdc8b1;
+    padding: 10px 27px 27px 27px;
+    margin-top: 10px;
+}
+h4{
+    color: #86521a;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+h3{
+    color: #227115;
+    font-size: 1.0em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#rodape{
+    padding: 20px 0 30px 0;
+    background: url(img/fundo-rodape.png) no-repeat center top;
+    text-align: center;
+    margin-top: 20px;
+}
+#rodape>p a{
+    margin: 0 20px;
+}
+
+/* formulario */
+input{
+    height: 20px;
+    width: 80px;
+    background: #fff;
+    border: none;
+    font-size: 1em;
+}
+input.campo{
+    border: 1px solid #ada484;
+}
+input.botao{
+    background: #9b9271;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+fieldset{
+    border: none;
+}
+legend{
+    display: none;
+}
+
+/* formatação galeria */
+#galeria{
+    padding: 0 27px;
+}
+#galeria a{
+    display: block;
+    background: url(img/fundo-foto.png) no-repeat;
+    padding: 18px;
+    float: left;
+    margin-left: 10px;
+    
+
 }
